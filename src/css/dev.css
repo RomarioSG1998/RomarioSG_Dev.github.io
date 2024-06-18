@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+  }
+body {
+    font-family: 'Poetsen One', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5A6D7B;
+    letter-spacing: 1px;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+video {
+    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura da tela */
+    height: auto;
+  }
+h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+.project h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.project p {
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+#p1 {
+    text-align: center;
+    margin-bottom: 0;
+    color: #666;
+}
+
+.technologies {
+    text-align: center;
+}
+
+.technology-item {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.js-icon {
+    color: #f0db4f;
+    font-size: 24px;
+}
+
+.php-icon {
+    color: #8892be;
+    font-size: 24px;
+}
+
+.python-icon {
+    color: #306998;
+    font-size: 24px;
+}
+
+.sql-icon {
+    color: #4caf50;
+    font-size: 24px;
+}
+
+.bullet {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.blue-bullet {
+    color: brown;
+}
+
+.laravel-icon {
+    color: #ff2d20;
+    font-size: 24px;
+}
+.django-icon {
+    color: #092E20; /* Cor verde-escuro do Django */
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #d3d3d3;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project-image {
+    flex: 1;
+    padding: 10px;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-details {
+    flex: 2;
+    padding: 10px;
+}
+
+/* Media Query para telas com largura máxima de 750px */
+@media (max-width: 750px) {
+    .container {
+        width: 100%;
+        margin: 25px auto;
+    }
+    h1 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+
+    video {
+        max-width: 80%; /* Garante que o vídeo não ultrapasse a largura da tela */
+        height: auto;
+      }
+    h4 {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    p {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    .resume p {
+        margin: 3px 0;
+        font-size: 14px;
+    }
+    .project-container {
+        flex-direction: column;
+    }
+    .project-image, .project-details {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+    .project-image img {
+        width: 100%;
+    }
+}

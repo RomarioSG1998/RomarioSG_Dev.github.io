@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poetsen One', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #696969;
+}
+
+main {
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    padding-left: calc(82px + 20px);
+}
+
+#sidebar {
+    display: flex;
+    min-width: 60px;
+    left: 25px; 
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    height: 50vh;
+    margin-top: 10%;
+    border-radius: 20px;
+    position: relative;
+    transition: all .5s;
+    z-index: 2;
+}
+
+#sidebar_content {
+    padding: 10px;
+}
+
+#user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+#user_infos {
+    display: flex;
+    flex-direction: column;
+}
+
+#user_infos span:last-child {
+    color: #696969;
+    font-size: 9px;
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.side-item a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+}
+
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 20px;
+}
+
+#open_btn {
+    background-color: transparent;
+    position: absolute;
+    top: 150px;
+    right: -10px;
+    color: black;
+    border: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon {
+    transition: transform .3s ease;
+}
+
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+
+.item-description {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+
+#sidebar.open-sidebar {
+    width: 12%;
+}
+
+#sidebar.open-sidebar .item-description {
+    width: 120px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+/* CSS para o popup */
+#popup {
+    display: none;
+    position: fixed;
+    font-family: "Poetsen One", sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw; /* 80% da largura da viewport */
+    height: 80vh; /* 80% da altura da viewport */
+    max-width: 600px;
+    max-height: 600px;
+    background-color: #fff;
+    border: 1px solid black;
+    box-shadow: 0 2px 4px black;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+#popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para o contêiner do conteúdo da página */
+#page_content_container {
+    position: absolute;
+    width: 80vw; /* 80% da largura da viewport */
+    height: 90vh;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px black;
+    background-color: #fdfafa;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+}
+
+.tooltip {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 999; /* Para garantir que fique acima de outros elementos */
+}
+
+/* Remover alterações de cor na sidebar por padrão */
+.side-item:hover{
+    background-color: rgba(70, 66, 66, 0.4);
+}
+/* Seu código CSS existente */
+
+.side-item.active {
+    background-color: rgba(70, 66, 66, 0.2); /* Fundo com leve transparência */
+}
+
+
+
+/* Alterações para mudar a cor dos itens da sidebar somente em telas de celular */
+@media screen and (max-width: 690px) {
+    body {
+        overflow: hidden;
+    }
+    
+    #sidebar {
+        background-color: transparent;
+        position: fixed;
+        top: 525px;
+        left: 0;
+        right: 0;
+        width: 0%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.10); /* Define o fundo com 80% de opacidade */
+        color: black;
+        margin-left: 46px;
+        margin-right: auto;
+        transform: translateY(0);
+    }
+   
+    #page_content_container {
+        width: 90vw; /* 80% da largura da viewport */
+        height: 90vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        padding: 0px;
+    }
+
+    #sidebar_content {
+        padding-top: 20px;
+    }
+
+    #user {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        border-bottom: 0px solid #ccc;
+    }
+
+    #user_avatar {
+        background-color: transparent;
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    #side_items {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .side-item {
+        width: 100%;
+    }
+
+    .side-item a {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .side-item a i {
+        margin-right: 10px;
+        opacity: 0.3; /* Define a opacidade dos ícones */
+    }
+
+    #open_btn {
+        display: none;
+    }
+
+    .side-item a {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    #side_items {
+        flex-direction: row; /* Altera a direção do flex para linha */
+    }
+
+    .side-item {
+        margin-right: 10px; /* Adiciona margem entre os itens */
+    }
+
+    /* Alterações de cor específicas para dispositivos móveis */
+    .side-item:hover,
+    .side-item:active,
+    .side-item:focus,
+    #logout_btn:hover {
+        background-color: inherit;
+    }
+}
