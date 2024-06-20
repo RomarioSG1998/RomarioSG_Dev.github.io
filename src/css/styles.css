@@ -27,8 +27,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
-    height: 50vh;
-    margin-top: 10%;
+    height: 45vh;
+    margin-top: 17%;
     border-radius: 20px;
     position: relative;
     transition: all .5s;
@@ -43,7 +43,7 @@ main {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 #user_infos {
@@ -53,7 +53,7 @@ main {
 
 #user_infos span:last-child {
     color: #696969;
-    font-size: 9px;
+    font-size: 7px;
 }
 
 #side_items {
@@ -88,9 +88,9 @@ main {
 #open_btn {
     background-color: transparent;
     position: absolute;
-    top: 150px;
+    top: 90px;
     right: -10px;
-    color: black;
+    color: white;
     border: 20px;
     height: 20px;
     border: none;
@@ -203,7 +203,7 @@ main {
     #sidebar {
         background-color: transparent;
         position: fixed;
-        top: 525px;
+        top:490px;
         left: 0;
         right: 0;
         width: 0%;
