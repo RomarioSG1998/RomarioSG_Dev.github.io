@@ -210,7 +210,7 @@ main {
         height: auto;
         background-color: rgba(255, 255, 255, 0.10); /* Define o fundo com 80% de opacidade */
         color: black;
-        margin-left: 46px;
+        margin-left: 55px;
         margin-right: auto;
         transform: translateY(0);
     }
