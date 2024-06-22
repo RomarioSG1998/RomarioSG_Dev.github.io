@@ -22,8 +22,8 @@ header {
 }
 
 video {
-    max-width: 100%; /* Garante que o vídeo não ultrapasse a largura da tela */
-    height: auto;
+    max-width: 70%; /* Garante que o vídeo não ultrapasse a largura da tela */
+    height: 50%;
   }
 h2 {
     text-align: center;
@@ -118,7 +118,7 @@ h2 {
 }
 
 /* Media Query para telas com largura máxima de 750px */
-@media (max-width: 750px) {
+@media (max-width: 681px) {
     .container {
         width: 100%;
         margin: 25px auto;
@@ -146,6 +146,7 @@ h2 {
     }
     .project-container {
         flex-direction: column;
+        margin: 15px;
     }
     .project-image, .project-details {
         flex: none;

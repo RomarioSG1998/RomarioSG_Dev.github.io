@@ -216,7 +216,7 @@ main {
     }
    
     #page_content_container {
-        width: 90vw; /* 80% da largura da viewport */
+        width: 94vw; /* 80% da largura da viewport */
         height: 90vh;
         top: 50%;
         left: 50%;
@@ -227,6 +227,9 @@ main {
 
     #sidebar_content {
         padding-top: 20px;
+    }
+    #sidebar_content {
+        padding: 16px;
     }
 
     #user {
