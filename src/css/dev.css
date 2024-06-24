@@ -119,41 +119,36 @@ h2 {
 
 /* Media Query para telas com largura máxima de 750px */
 @media (max-width: 681px) {
-    .container {
-        width: 100%;
-        margin: 25px auto;
+    @media (max-width: 750px) {
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        h1 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        h4 {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        p {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        .resume p {
+            margin: 3px 0;
+            font-size: 14px;
+        }
+        .project-container {
+            flex-direction: column;
+        }
+        .project-image, .project-details {
+            flex: none;
+            width: 100%;
+            padding: 0;
+        }
+        .project-image img {
+            width: 100%;
+        }
     }
-    h1 {
-        margin-bottom: 5px;
-        font-size: 16px;
-    }
-
-    video {
-        max-width: 80%; /* Garante que o vídeo não ultrapasse a largura da tela */
-        height: auto;
-      }
-    h4 {
-        margin-top: 15px;
-        font-size: 12px;
-    }
-    p {
-        margin-top: 15px;
-        font-size: 12px;
-    }
-    .resume p {
-        margin: 3px 0;
-        font-size: 14px;
-    }
-    .project-container {
-        flex-direction: column;
-        margin: 15px;
-    }
-    .project-image, .project-details {
-        flex: none;
-        width: 100%;
-        padding: 0;
-    }
-    .project-image img {
-        width: 100%;
-    }
-}

@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poetsen One', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 
 main {
     padding: 10px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     padding-left: calc(82px + 20px);
 }
@@ -30,7 +30,7 @@ main {
     height: 45vh;
     margin-top: 17%;
     border-radius: 20px;
-    position: relative;
+    position: absolute;
     transition: all .5s;
     z-index: 2;
 }
@@ -91,9 +91,8 @@ main {
     top: 90px;
     right: -10px;
     color: white;
-    border: 20px;
-    height: 20px;
     border: none;
+    height: 20px;
     cursor: pointer;
 }
 
@@ -129,11 +128,10 @@ main {
     gap: 14px;
 }
 
-/* CSS para o popup */
 #popup {
     display: none;
     position: fixed;
-    font-family: "Poetsen One", sans-serif;
+    font-family: "Poppins", sans-serif;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -156,7 +154,6 @@ main {
     cursor: pointer;
 }
 
-/* Estilo para o contêiner do conteúdo da página */
 #page_content_container {
     position: absolute;
     width: 80vw; /* 80% da largura da viewport */
@@ -169,7 +166,7 @@ main {
     border: 1px solid #ccc;
     box-shadow: 0 4px 6px black;
     background-color: #fdfafa;
-    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+    overflow-y: auto;
 }
 
 .tooltip {
@@ -182,19 +179,15 @@ main {
     z-index: 999; /* Para garantir que fique acima de outros elementos */
 }
 
-/* Remover alterações de cor na sidebar por padrão */
-.side-item:hover{
+.side-item:hover {
     background-color: rgba(70, 66, 66, 0.4);
 }
-/* Seu código CSS existente */
 
 .side-item.active {
     background-color: rgba(70, 66, 66, 0.2); /* Fundo com leve transparência */
 }
 
-
-
-/* Alterações para mudar a cor dos itens da sidebar somente em telas de celular */
+/* Adjustments for screens 690px or smaller */
 @media screen and (max-width: 690px) {
     body {
         overflow: hidden;
@@ -203,20 +196,20 @@ main {
     #sidebar {
         background-color: transparent;
         position: fixed;
-        top:490px;
+        top: 490px;
         left: 0;
         right: 0;
-        width: 0%;
+        width: 100%; /* Adjusted to 100% to take full width */
         height: auto;
-        background-color: rgba(255, 255, 255, 0.10); /* Define o fundo com 80% de opacidade */
+        background-color: rgba(255, 255, 255, 0.10); /* Define o fundo com 10% de opacidade */
         color: black;
-        margin-left: 55px;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
         transform: translateY(0);
     }
    
     #page_content_container {
-        width: 94vw; /* 80% da largura da viewport */
+        width: 94vw; /* 94% da largura da viewport */
         height: 90vh;
         top: 50%;
         left: 50%;
@@ -226,10 +219,107 @@ main {
     }
 
     #sidebar_content {
-        padding-top: 20px;
-    }
-    #sidebar_content {
         padding: 16px;
+    }
+
+    #user {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        border-bottom: 0px solid #ccc;
+    }
+
+    #user_avatar {
+        background-color: transparent;
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    #side_items {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .side-item {
+        width: 100%;
+    }
+
+    .side-item a {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .side-item a i {
+        margin-right: 10px;
+        opacity: 0.3; /* Define a opacidade dos ícones */
+    }
+
+    #open_btn {
+        display: none;
+    }
+
+    .side-item a {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    #side_items {
+        flex-direction: row; /* Altera a direção do flex para linha */
+    }
+
+    .side-item {
+        margin-right: 10px; /* Adiciona margem entre os itens */
+    }
+
+    /* Alterações de cor específicas para dispositivos móveis */
+    .side-item:hover,
+    .side-item:active,
+    .side-item:focus,
+    #logout_btn:hover {
+        background-color: inherit;
+    }
+}
+
+/* Adjustments for screens smaller than 400px */
+@media screen and (max-width: 400px) {
+    body {
+        overflow: hidden;
+    }
+    
+    #sidebar {
+        background-color: transparent;
+        position: fixed;
+        top: 525px;
+        left: 0;
+        right: 0;
+        width: 0%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.10); /* Define o fundo com 80% de opacidade */
+        color: black;
+        margin-left: 46px;
+        margin-right: auto;
+        transform: translateY(0);
+    }
+   
+    #page_content_container {
+        width: 90vw; /* 80% da largura da viewport */
+        height: 90vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        padding: 20px;
+    }
+
+    #sidebar_content {
+        padding-top: 20px;
     }
 
     #user {
