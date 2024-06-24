@@ -118,10 +118,10 @@ h2 {
 }
 
 /* Media Query para telas com largura máxima de 750px */
-@media (max-width: 681px) {
-    @media (max-width: 750px) {
+@media (max-width: 1020px) {
+   
         .container {
-            width: 90%;
+            width: 100%;
             margin: 20px auto;
         }
         h1 {

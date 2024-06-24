@@ -288,7 +288,7 @@ main {
 }
 
 /* Adjustments for screens smaller than 400px */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1020px) {
     body {
         overflow: hidden;
     }
@@ -296,14 +296,14 @@ main {
     #sidebar {
         background-color: transparent;
         position: fixed;
-        top: 525px;
+        top: 515px;
         left: 0;
         right: 0;
         width: 0%;
         height: auto;
         background-color: rgba(255, 255, 255, 0.10); /* Define o fundo com 80% de opacidade */
         color: black;
-        margin-left: 46px;
+        margin-left: 65px;
         margin-right: auto;
         transform: translateY(0);
     }
