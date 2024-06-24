@@ -21,10 +21,6 @@ header {
     text-align: center;
 }
 
-video {
-    max-width: 70%; /* Garante que o vídeo não ultrapasse a largura da tela */
-    height: 50%;
-  }
 h2 {
     text-align: center;
     color: #007bff;
@@ -118,37 +114,36 @@ h2 {
 }
 
 /* Media Query para telas com largura máxima de 750px */
-@media (max-width: 1020px) {
-   
-        .container {
-            width: 100%;
-            margin: 20px auto;
-        }
-        h1 {
-            margin-bottom: 5px;
-            font-size: 16px;
-        }
-        h4 {
-            margin-top: 15px;
-            font-size: 12px;
-        }
-        p {
-            margin-top: 15px;
-            font-size: 12px;
-        }
-        .resume p {
-            margin: 3px 0;
-            font-size: 14px;
-        }
-        .project-container {
-            flex-direction: column;
-        }
-        .project-image, .project-details {
-            flex: none;
-            width: 100%;
-            padding: 0;
-        }
-        .project-image img {
-            width: 100%;
-        }
+@media (max-width: 750px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
     }
+    h1 {
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    h4 {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    p {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+    .resume p {
+        margin: 3px 0;
+        font-size: 14px;
+    }
+    .project-container {
+        flex-direction: column;
+    }
+    .project-image, .project-details {
+        flex: none;
+        width: 100%;
+        padding: 0;
+    }
+    .project-image img {
+        width: 100%;
+    }
+}
